@@ -1,5 +1,5 @@
 use proc_macro_template::layer;
 
 fn main() {
-    layer!(meow);
+    {{macro_name}}!();
 }

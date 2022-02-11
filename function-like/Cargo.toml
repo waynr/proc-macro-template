@@ -1,7 +1,8 @@
 [package]
-name = "proc-macro-template"
+name = "{{crate_name}}"
 version = "0.1.0"
 edition = "2021"
+authors = "{{authors}}"
 
 [lib]
 proc-macro = true
