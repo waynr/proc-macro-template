@@ -1,10 +1,11 @@
 use proc_macro::TokenStream;
 use proc_macro_error::proc_macro_error;
 
-mod analyze;
-mod codegen;
-mod lower;
-mod parse;
+mod {{macro_name}};
+use crate::{{macro_name}}::analyze;
+use crate::{{macro_name}}::codegen;
+use crate::{{macro_name}}::lower;
+use crate::{{macro_name}}::parse;
 
 #[proc_macro]
 #[proc_macro_error]
@@ -14,14 +15,4 @@ pub fn {{macro_name}}(ts: TokenStream) -> TokenStream {
     let ir = lower::lower(model);
     let _ = codegen::codegen(ir);
     TokenStream::new()
-}
-
-
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        let result = 2 + 2;
-        assert_eq!(result, 4);
-    }
 }
