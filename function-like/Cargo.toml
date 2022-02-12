@@ -2,7 +2,7 @@
 name = "{{crate_name}}"
 version = "0.1.0"
 edition = "2021"
-authors = "{{authors}}"
+authors = [ "{{authors}}" ]
 
 [lib]
 proc-macro = true
