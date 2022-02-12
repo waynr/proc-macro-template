@@ -1,0 +1,3 @@
+[placeholders.macro_name]
+type = "string"
+prompt = "What will the name of your macro be?"
